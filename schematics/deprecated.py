@@ -16,11 +16,11 @@ class SchematicsDeprecationWarning(DeprecationWarning):
 def deprecated(func):
     @functools.wraps(func)
     def new_func(*args, **kwargs):
-        warnings.warn(
-            "Call to deprecated function {0}.".format(func.__name__),
-            category=SchematicsDeprecationWarning,
-            stacklevel=2
-        )
+        # warnings.warn(
+        #     "Call to deprecated function {0}.".format(func.__name__),
+        #     category=SchematicsDeprecationWarning,
+        #     stacklevel=2
+        # )
         return func(*args, **kwargs)
     return new_func
 
